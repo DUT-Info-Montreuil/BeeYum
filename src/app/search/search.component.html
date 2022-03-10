@@ -1,1 +1,10 @@
-<p>search works!</p>
+<section class="text-center" id="searchSection">
+
+<input class="search-control" type="text" placeholder="Search" >
+
+<div class="text-center" *ngFor = "let data of httpData.hits">
+  <img src="{{data.webformatURL}}" />
+</div>
+
+
+</section>
