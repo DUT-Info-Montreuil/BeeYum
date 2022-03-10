@@ -1,10 +1,14 @@
 <section class="text-center" id="searchSection">
 
-<input class="search-control" type="text" placeholder="Search" >
+<div class="row">
+  <div class="col-4" *ngFor="let data of httpData.hits">
+    <div class="bg-white rounded shadow-sm"><img src="{{data.webformatURL}}" alt="" class="img-fluid card-img-top">
+      <div class="p-4" style="background-color:#BAFBA1">
+        <h5> <a href="{{data.pageURL}}" class="text-dark">Lien vers l'image</a></h5>
+        <p class="small text-muted mb-0">{{data.tags}}</p>  
+      </div>
+    </div>
+  </div>
+</div>  
 
-<div class="text-center" *ngFor = "let data of httpData.hits">
-  <img src="{{data.webformatURL}}" />
-</div>
-
-
-</section>
+</section>  
