@@ -1,14 +1,28 @@
 <section class="text-center" id="searchSection">
 
+  <form  (ngSubmit)="search()">
+    <div>
+      
+      <div class="form-group">
+        <input type="text" [(ngModel)]="searchText" name="recherche">
+      </div>
+    </div>
+ 
+  </form>
+
+
+  <br>
+  
+
 <div class="row">
   <div class="col-4" *ngFor="let data of httpData.hits">
     <div class="bg-white rounded shadow-sm"><img src="{{data.webformatURL}}" alt="" class="img-fluid card-img-top">
       <div class="p-4" style="background-color:#BAFBA1">
-        <h5> <a href="{{data.pageURL}}" class="text-dark">Lien vers l'image</a></h5>
-        <p class="small text-muted mb-0">{{data.tags}}</p>  
+        <h5> <a href="{{data.pageURL}}" class="text-dark" target="_blank">Lien vers l'image</a></h5>
+        <p class="small text-muted mb-0">{{data.tags}}</p>
       </div>
     </div>
   </div>
-</div>  
+</div>
 
-</section>  
+</section>

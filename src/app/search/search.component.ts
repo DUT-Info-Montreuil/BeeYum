@@ -1,30 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-// interface image{
-//   id: number;
-//   pageURL: any;
-//   type: any;
-//   tags: any;
-//   previewURL: any;
-//   previewWidth: any;
-//   previewHeight: any; 
-//   webFormatURL: any;
-//   webFormatWidth: any;
-//   webFormatHeight: any;
-//   largeImageURL: string;
-//   imageWidth: any;
-//   imageHeight: any;
-//   imageSize: any;
-//   views: any;
-//   downloads: any;
-//   collections: any;
-//   likes: any;
-//   comments: any;
-//   user_id: any;
-//   user: any;
-//   userImageURL: any;
-// }
 
 var url: string = "https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8";
 @Component({
@@ -40,7 +16,7 @@ export class SearchComponent implements OnInit {
 
   // url = "https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8";
   httpData: any = [];
-  searchText = '';
+  searchText: string = '';
 
   toggleSearch: boolean = false;
 
@@ -56,6 +32,15 @@ export class SearchComponent implements OnInit {
     this.http.get(url).subscribe(data => {
       this.httpData = data;
       console.log(data);
+    });
+  }
+  
+  search() {
+    url = `https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8&q=${this.searchText}`;
+    this.http.get(url).subscribe(data => {
+      this.httpData = data;
+      console.log(data);
+      console.log(url);
     });
   }
 
