@@ -6,14 +6,16 @@
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
+        <li><a routerLinkActive="active" routerLink="/search" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a routerLinkActive="active" routerLink="/about" class="nav-link px-2 link-dark">About</a></li>
+        <li><a outerLinkActive="active" routerLink="/contact" class="nav-link px-2 link-dark">Contact</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
         
       </div>
     </header>
-    <hr style="color: #BAFBA1; height: 5px;">
-  </div>    
+  <hr style="color: #BAFBA1; height: 5px;">
+<router-outlet></router-outlet>
+
+</div>  

@@ -16,9 +16,9 @@
     <div class="col-lg-4 col-sm-6" *ngFor="let data of httpData.hits">
       <div class="thumbnail img-responsive">
         
-        <img src="{{data.webformatURL}}" alt="" class="img-fluid card-img-top">
+        <img src="{{data.webformatURL}}" alt="picture" class="img-fluid card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
 
-        <div class="p-4" style="background-color:#BAFBA1; margin-bottom: 3%;">
+        <div class="p-4" style="background-color:#BAFBA1; margin-bottom: 3%; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
           <h5> <a href="{{data.pageURL}}" class="text-dark" target="_blank">Lien vers l'image</a></h5>
           <p class="small text-muted mb-0">{{data.tags}}</p>
         </div>
