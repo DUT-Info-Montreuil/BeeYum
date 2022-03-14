@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 var url: string = "https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8";
 @Component({
