@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SearchComponent } from './search/search.component';
 import { ContactComponent } from './contact/contact.component';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       { path: 'search', component: SearchComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'about', component: AboutComponent }
+      { path: 'about', component: AboutComponent },
+      { path: '**', component: SearchComponent }
     ])
   ],
   exports: [
@@ -21,4 +22,5 @@ import { AboutComponent } from './about/about.component';
   ],
   providers: [],
 })
+
 export class AppRoutingModule { }
