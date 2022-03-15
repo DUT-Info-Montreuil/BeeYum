@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
 
   @Output() sidenavClose = new EventEmitter(); 
 
-  // url = "https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8";
   httpData: any = [];
   searchText: string = '';
 
@@ -37,7 +36,8 @@ export class SearchComponent implements OnInit {
   }
   
   search() {
-    url = `https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8&q=${this.searchText}`;
+    url = 
+    `https://pixabay.com/api/?key=26062389-25f3ac48089ed7df26e99b5f8&q=${this.searchText}`;
     this.http.get(url).subscribe(data => {
       this.httpData = data;
       console.log(data);
